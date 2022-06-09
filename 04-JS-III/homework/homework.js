@@ -213,15 +213,19 @@ function mesesDelAño(array) {
   for (var i=1; i<array.length; i++)
 {
          if (array[i]=="Enero")
-         array[i] = array[i]
+         var a = array[i];
 
         if (array[i]=="Marzo")
-        array[i] = array[i] 
+        var b = array[i] ;
 
         if (array[i]=="Noviembre")
-        array[i] = array[i]
+        var c = array[i];
 
 }
+
+if(a == "Enero" && b == "Marzo" && c == "Noviembre")
+return a,b,b;
+return "No se encontraron los meses pedidos";
       
 }
 
@@ -230,6 +234,22 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+    var j=0;
+    var arrayb = [];
+  for(var i = 1 ; i < array.length;  i ++)
+    {
+      if (array[i] > 100)
+      {
+        j = j + 1;
+        arrayb[j] = array[i];
+      }
+        
+    }
+
+    for (var i = 1 ; i < arrayb.length; i++)
+    {
+      return arrayb[i];
+    }
 }
 
 
@@ -241,6 +261,25 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var i = 1,j=0, array =[];
+  while(i < 11)
+  {
+    array[j]=numero;
+    j = j + 1;
+      if(numero == i)
+      {
+        return "Se interrumpió la ejecución";
+          break;
+      }
+      i++;
+      
+      numero = numero + 2;
+  }
+    for (var i = 1 ; i<= j; j++)
+    {
+        return array[j];
+
+    }
 }
 
 
